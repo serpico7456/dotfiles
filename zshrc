@@ -13,7 +13,6 @@ ZSH_THEME="rhorrisb"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-alias vim='mvim -v'
 alias ll='ls -lAh'
 alias ls='ls -bF'
 alias cd..='cd ..'
@@ -22,13 +21,6 @@ alias cd...='cd ../..'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -53,7 +45,7 @@ plugins=(git bundler brew gem)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/rhorrisb/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/Users/rhorrisb/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
 
 export EDITOR='/usr/bin/vim'
 #vim keybindings
@@ -66,4 +58,4 @@ bindkey ‘^R’ history-incremental-search-backward
 bindkey -M vicmd v edit-command-line
 
 # for Homebrew installed rbenv
- if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+ if which rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
