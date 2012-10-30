@@ -18,7 +18,7 @@ alias ls='ls -bF'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 # public IP
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
