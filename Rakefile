@@ -10,8 +10,8 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.rdoc LICENSE osx]
-  files << "oh-my-zsh/custom/rhorrisb.zsh-theme"
+  files = Dir['*'] - %w[Rakefile README.md LICENSE osx]
+  files << "~/.oh-my-zsh/custom/rhorrisb.zsh-theme"
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))

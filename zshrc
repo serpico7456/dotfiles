@@ -19,7 +19,7 @@ alias ls='ls -bF'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 # public IP
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 # Flush Directory Service cache
@@ -29,6 +29,11 @@ alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+#start tmux when ssh'ing         
+ssht() {
+    ssh -t "$1" "tmux at || tmux"
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -53,9 +58,9 @@ plugins=(git bundler brew gem)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/rhorrisb/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/Users/rhorrisb/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/sbin:/sbin:$PATH
 
-export EDITOR='/usr/bin/vim'
+export EDITOR='mvim -v'
 #vim keybindings
 bindkey -v
 #map jj in insert mode to enter command mode
@@ -66,4 +71,4 @@ bindkey ‘^R’ history-incremental-search-backward
 bindkey -M vicmd v edit-command-line
 
 # for Homebrew installed rbenv
- if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+ if which rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
