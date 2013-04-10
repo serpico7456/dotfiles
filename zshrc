@@ -17,6 +17,7 @@ alias vim='mvim -v'
 alias ll='ls -lAh'
 alias ls='ls -bF'
 alias cd..='cd ..'
+alias top=htop
 alias cd...='cd ../..'
 # public IP
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -66,7 +67,8 @@ bindkey -v
 #map jj in insert mode to enter command mode
 bindkey -M viins 'jj' vi-cmd-mode
 #allow ctrl-r to inremental search
-bindkey ‘^R’ history-incremental-search-backward
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
 #bind 'v' to edit line in vim
 bindkey -M vicmd v edit-command-line
 
