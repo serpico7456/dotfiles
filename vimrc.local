@@ -36,3 +36,6 @@ function MyDiff()
 endfunction
 
 
+set shiftwidth=2                " use indents of 2 spaces
+set tabstop=2                   " an indentation every two columns
+set softtabstop=2               " let backspace delete indent"
