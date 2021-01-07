@@ -1,0 +1,17 @@
+#!/bin/bash
+# My mac config
+
+# xcode devel tools for compilers
+xcode-select --install
+
+# Homebrew package management
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+# Git config
+git config --global user.email "ryan.horrisberger@wisc.edu"
+git config --global user.name "Ryan Horrisberger"
+
+
+# macOS settings
+
