@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Install command-line tools using Homebrew.
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+brew install wget
+brew install telnet
+brew install nmap 
+# youtube downloader
+brew install youtube-dl 
+brew install vim 
+# mac app store ccli
+brew install mas 
+# pandora cli
+brew install pianobar 
+# better top
+brew install htop
+
+brew install --cask amazon-music
+brew install --cask firefox
+brew install --cask bartender
+brew install --cask enpass
+brew install --cask google-backup-and-sync
+brew install --cask keepingyouawake
+brew install --cask visual-studio-code
+brew install --cask wireshark
+brew install --cask docker
+brew install --cask fantastical
+brew install --cask google-chrome
+brew install --cask iterm2
+# java support
+brew install --cask openwebstart
+brew install --cask powershell
+brew install --cask vlc

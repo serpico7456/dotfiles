@@ -15,3 +15,7 @@ git config --global user.name "Ryan Horrisberger"
 
 # macOS settings
 
+
+#.zshrc files
+#.vim stuff
+# make this mac only stuff, linux stuff can go elsewhere
